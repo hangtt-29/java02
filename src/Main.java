@@ -18,12 +18,17 @@ public class Main {
 
     static void demoFor() {
         SoNguyTo sn = new SoNguyTo();
-        System.out.println("In ra Các số nguyên tố đầu tiên dùng for:");
-        for (int i = 2; i <= 10; i++) {
+        System.out.println("Nhập vào số n:");
+        Scanner input= new Scanner(System.in);
+        int n= input.nextInt();
+
+        System.out.println("In ra Các số nguyên tố đầu tiên dùng for: ");
+        for (int i = 2; i <= n; i++) {
             if (sn.inSoNguye(i)) {
                 System.out.print(i + "\t");
             }
         }
+
     }
 
     static void deSoNguyenFor() {
@@ -38,13 +43,14 @@ public class Main {
 
     static void deSoNguyenWhile() {
         SoNguyTo sn2 = new SoNguyTo();
+        System.out.println("Nhập vào số n: ");
+        Scanner sn1= new Scanner(System.in);
+        int n= sn1.nextInt();
         System.out.println("In ra các số nguyên tố đầu tiên dùng hàm while:");
         int i = 0;
-        int dem = 0;
-        while (dem < 5) {
+        while (i<=n) {
             if (sn2.inSoNguye(i)) {
                 System.out.print(i + "\t");
-                dem++;
             }
             i++;
         }
@@ -54,11 +60,9 @@ public class Main {
         SoNguyTo sn3 = new SoNguyTo();
         System.out.println("In ra các số nguyên tố nhỏ hơn 100 dùng hàm while:");
         int i = 0;
-        int dem = 0;
         while (i < 100) {
             if (sn3.inSoNguye(i)) {
                 System.out.print(i + "\t");
-                dem++;
             }
             i++;
         }
@@ -66,6 +70,9 @@ public class Main {
 
     static void demSoDOWhile() {
         SoNguyTo sn4 = new SoNguyTo();
+        System.out.println("Nhập vào số n: ");
+        Scanner scanner1= new Scanner(System.in);
+        int n =scanner1.nextInt();
         System.out.println("In ra các số nguyên tố đầu tiên dùng hàm do while:");
         int i = 0;
         do {
@@ -73,18 +80,19 @@ public class Main {
                 System.out.print(i + "\t");
             }
             i++;
-        } while (i <= 10);
+        } while (i <= n);
     }
-static void demSoDoWhile1(){
-        SoNguyTo sn5= new SoNguyTo();
-    System.out.println("In ra các số nguyên tố nhỏ hơn 100 dùng hàm do while:");
-    int i= 0;
-    do {
-        if (sn5.inSoNguye(i)){
-            System.out.print(i+"\t");
-        }
-        i++;
-    }while (i<=100);
-}
+
+    static void demSoDoWhile1() {
+        SoNguyTo sn5 = new SoNguyTo();
+        System.out.println("In ra các số nguyên tố nhỏ hơn 100 dùng hàm do while:");
+        int i = 0;
+        do {
+            if (sn5.inSoNguye(i)) {
+                System.out.print(i + "\t");
+            }
+            i++;
+        } while (i <= 100);
+    }
 
 }
