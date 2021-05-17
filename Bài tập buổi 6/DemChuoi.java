@@ -21,6 +21,7 @@ public class DemChuoi {
         System.out.println("Nhập vào 1 chuỗi:");
         String ip = s.nextLine();
         ip = ip.trim();
+        ip=ip.replaceAll("\\s+"," ");
         int dem = 0;
         for (int i = 0; i < ip.length(); i++) {
             if (Character.toString(ip.charAt(i)).equals(" ")) {
